@@ -11,6 +11,11 @@
  * This should be an array of module namespaces used in the application.
  */
 return [
+    'Zend\I18n',
+    'Zend\InputFilter',
+    'Zend\Filter',
+    'Zend\Hydrator',
+    'Zend\Serializer',
     'Zend\ServiceManager\Di',
     'Zend\Session',
     'Zend\Mvc\Plugin\Prg',
@@ -27,4 +32,8 @@ return [
     'Zend\Validator',
     'ZendDeveloperTools',
     'Application',
+    'SCG',
+    'SCGApi',
+    'Str',
+    'Restaurant',
 ];

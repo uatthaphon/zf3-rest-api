@@ -1,0 +1,30 @@
+<?php
+// module/Album/view/album/album/index.phtml:
+
+$title = 'SCG Business';
+$this->headTitle($title);
+?>
+<h1><?= $this->escapeHtml($title) ?></h1>
+<p>
+    <a href="<?= $this->url('scg', ['action' => 'add']) ?>">Add new business</a>
+</p>
+
+<table class="table">
+<tr>
+    <th>Title</th>
+    <th>Holding (%)</th>
+    <th>Telephone</th>
+    <th>&nbsp;</th>
+</tr>
+<?php foreach ($scgs as $scg) : ?>
+    <tr>
+        <td><?= $this->escapeHtml($scg['business']) ?></td>
+        <td><?= $this->escapeHtml($scg['holding']) ?></td>
+        <td><?= $this->escapeHtml($scg['telephone']) ?></td>
+        <td>
+            <a href="<?= $this->url('scg', ['action' => 'edit', 'id' => $scg['id']]) ?>">Edit</a>
+            <a href="<?= $this->url('scg', ['action' => 'delete', 'id' => $scg['id']]) ?>">Delete</a>
+        </td>
+    </tr>
+<?php endforeach; ?>
+</table>

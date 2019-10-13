@@ -9,6 +9,7 @@ namespace Application;
 
 use Zend\Router\Http\Literal;
 use Zend\Router\Http\Segment;
+use SCG\Controller\SCGController;
 use Zend\ServiceManager\Factory\InvokableFactory;
 
 return [
@@ -19,7 +20,7 @@ return [
                 'options' => [
                     'route'    => '/',
                     'defaults' => [
-                        'controller' => Controller\IndexController::class,
+                        'controller' => SCGController::class,
                         'action'     => 'index',
                     ],
                 ],
